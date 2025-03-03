@@ -1,4 +1,5 @@
 <html>
+
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 <style>
 model-viewer {
@@ -14,16 +15,59 @@ background-color:DarkSlateGray;
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
 }
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color:DarkSlateGray;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color:Black;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
   
 </style>
-  <body>
-  <center>
-<!-- Use it like any other HTML element -->
-<model-viewer camera-controls touch-action="pan-y" alt="A 3D model of a sphere" src="https://woodwardiii-hs.github.io/ELA-3D/jail.glb">
+
+<div class="split left">
+  <div class="centered">
+    <model-viewer camera-controls touch-action="pan-y" alt="A 3D model of a sphere" src="https://woodwardiii-hs.github.io/ELA-3D/jail.glb">
                 </model-viewer>
- <div class="box">
-  <div><h1>test</h1>phsjklkjhjuiolkjh</div>
+    <h2>Model of Sence</h2>
+  </div>
 </div>
-  </center>
-    </body>
+
+<div class="split right">
+  <div class="centered">
+    <h2>John Doe</h2>
+    <p>Some text here too.</p>
+  </div>
+</div>
 </html>

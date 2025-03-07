@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+
+model-viewer {
+  width: 600px;
+  height: 600px;
+background-color:DarkSlateGray;
+} body {
+  background-color: DarkSlateGray;
+}
+  
+
+
+
+
+
+  
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: DarkSlateGray;
+}
+
+.right {
+  right: 0;
+  background-color: #111;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<button onclick="document.location='https://woodwardiii-hs.github.io/ELA-3D/'">Back to main</button>
+
+<div class="split left">
+  <div class="centered">
+    <model-viewer camera-controls touch-action="pan-y" alt="A 3D model of a sphere" src="https://woodwardiii-hs.github.io/ELA-3D/Book.glb">
+                </model-viewer>
+    <h2>3D model of Sence</h2>
+  
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    
+    <h2>Book summary</h2>
+   
+    
+    <p>
+The book 'The Guardians' by John Grisham follows a lawyer on his journey to exonerate an innocent man from prison after he was wrongfully accused of murder. The book Chronicles his struggles both with this process and with his other cases.
+</p>
+    <h1><a href="https://woodwardiii-hs.github.io/ELA-3D/">Back to main page</a></h1>
+  </div>
+</div>
+     
+</body>
+</html> 
